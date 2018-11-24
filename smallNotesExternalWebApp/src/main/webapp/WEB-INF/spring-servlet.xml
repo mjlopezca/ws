@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:oauth="http://www.springframework.org/schema/security/oauth2"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+	 	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
+		http://www.springframework.org/schema/security/oauth2 http://www.springframework.org/schema/security/spring-security-oauth2-1.0.xsd">
+	<context:annotation-config />
+	<context:component-scan base-package="es.carlosgarcia" />
+	<aop:aspectj-autoproxy />
+	<mvc:default-servlet-handler />
+	<mvc:annotation-driven/>
+	
+	<sec:http  security="none" pattern="/resources/**"/>
+	
+	
+	<sec:http  access-denied-page="/WEB-INF/views/messages/notPrivileged.jsp" disable-url-rewriting="true">
+		<sec:intercept-url pattern="/oauth/**" 	    access="ROLE_USER" />
+		<sec:intercept-url pattern="/home"		    access="ROLE_USER" />
+		<sec:intercept-url pattern="/grant_type/**" access="ROLE_USER" />
+		<sec:intercept-url pattern="/**"	 	    access="IS_AUTHENTICATED_ANONYMOUSLY" />
+				
+		<sec:form-login authentication-failure-url="/login.jsp" login-page="/login.jsp"  default-target-url="/home"  login-processing-url="/login.do"/>
+		<sec:logout 	logout-success-url="/login.jsp" logout-url="/logout"/>
+		<sec:anonymous/>
+		<sec:custom-filter ref="oauth2ClientFilter" after="EXCEPTION_TRANSLATION_FILTER" />
+	</sec:http>
+	
+	<sec:authentication-manager alias="authenticationManager" xmlns="http://www.springframework.org/schema/security">
+		<sec:authentication-provider>
+			<sec:user-service>
+				<sec:user name="user1" password="pwd" authorities="ROLE_USER" />
+			</sec:user-service>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+	
+
+	<bean id="contentViewResolver" class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="mediaTypes">
+			<map>
+				<entry key="json" value="application/json" />
+			</map>
+		</property>
+		<property name="defaultViews">
+			<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	    <property name="messageConverters">
+	        <list>
+	            <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+	                <property name="objectMapper" ref="jacksonObjectMapper" />
+	            </bean>
+	        </list>
+	    </property>
+	</bean>
+
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean id="jacksonObjectMapper" 		  class="org.codehaus.jackson.map.ObjectMapper" />
+	<bean id="jacksonSerializationConfig" class="org.codehaus.jackson.map.SerializationConfig" factory-bean="jacksonObjectMapper" factory-method="getSerializationConfig" />
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+	    <property name="targetObject" ref="jacksonSerializationConfig" />
+	    <property name="targetMethod" value="setSerializationInclusion" />
+	    <property name="arguments">
+	        <list>
+	            <value type="org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion">NON_DEFAULT</value>
+	        </list>
+	    </property>
+	</bean>
+	
+	<!--apply the oauth client context -->
+	<oauth:client id="oauth2ClientFilter" />
+
+	<!--define an oauth 2 resource  -->
+	<oauth:resource id="api" type="authorization_code" client-id="smallNotesExternalWebApp_clientID" client-secret="smallNotesExternalWebApp_clientPASSWORD"  
+		user-authorization-uri="http://localhost:8080/smallNotes/oauth/authorize" 
+		access-token-uri="http://localhost:8080/smallNotes/oauth/token"   
+		scope="read,write"/>
+		
+	  <bean id="smallNotesService" class="es.carlosgarcia.external.service.SmallNotesService">
+		  <constructor-arg index="0" type="java.lang.String" value="http://localhost:8080/smallNotes/v1/api/notes"/>
+		  <constructor-arg index="1">
+		      <oauth:rest-template resource="api" />
+		  </constructor-arg>
+	  </bean>
+</beans>

@@ -1,0 +1,300 @@
+{
+	"id": "e245ee48-2c43-e99d-e670-56ddee582f73",
+	"name": "escolar",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "PersonaFisica",
+			"description": "",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"order": [
+				"c9f08534-d6f3-62a4-5bfe-87b8f640ef28",
+				"0be634be-7d23-6d76-984e-55473c140c04",
+				"1c55ea21-655a-859f-5a6b-b812f347a81d",
+				"2815bca2-3661-c1fb-01a9-0c44c883aaed"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "c9f8e728-795d-5c82-9eb5-835045bcce8d"
+		},
+		{
+			"name": "PersonaMoral",
+			"description": "",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"order": [
+				"26bf0471-03ca-3101-3c40-fa95a8ce56c1",
+				"15bfeaac-463a-7fec-e85d-434ba4c58d85",
+				"d9c8ff97-8b34-0f32-129e-33058c92caa0",
+				"96df6e3c-078d-4796-198b-5caa1a36f3b9"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "ac795d9d-5b0e-11ab-0d90-7d393d193142"
+		}
+	],
+	"folders_order": [
+		"c9f8e728-795d-5c82-9eb5-835045bcce8d",
+		"ac795d9d-5b0e-11ab-0d90-7d393d193142"
+	],
+	"timestamp": 1542413365213,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "0be634be-7d23-6d76-984e-55473c140c04",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/fisica",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"data": [],
+			"dataMode": "raw",
+			"name": "escolar/persona/fisica",
+			"description": "post",
+			"descriptionFormat": "html",
+			"time": 1542413371849,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "0be634be-7d23-6d76-984e-55473c140c04",
+			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
+			"rawModeData": "{\n\t\"nombre\":\"manuel\",\n\t\"apellidoPaterno\":\"asd\",\n\t\"apellidoMaterno\":\"asd\",\n\t\"fechaNacimiento\":\"2018/06/12\",\n\t\"sexo\":\"MASCULINO\",\n\t\"persona\":{\n\t\t\"rfc\":\"asdads12312\",\n\t\t\"tipo\":\"FISICA\",\n\t\t\"estado\":\"ACTIVO\"\n\t\t\n\t}\n}"
+		},
+		{
+			"id": "15bfeaac-463a-7fec-e85d-434ba4c58d85",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/moral",
+			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542999297781,
+			"name": "escolar/persona/moral",
+			"description": "post",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"responses": [],
+			"rawModeData": "{\n\t\"nombre\":\"patito\",\n\t\"razonSocial\":\"patito sa cv\",\n\t\"fechaConstitucion\":\"2018/06/12\",\n\t\"sexo\":\"MASCULINO\",\n\t\"persona\":{\n\t\t\"rfc\":\"asdads12312\",\n\t\t\"tipo\":\"MORAL\",\n\t\t\"estado\":\"ACTIVO\"\n\t\t\n\t}\n}"
+		},
+		{
+			"id": "1c55ea21-655a-859f-5a6b-b812f347a81d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/fisica/",
+			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542998570803,
+			"name": "escolar/persona/fisica/7",
+			"description": "",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "1c55ea21-655a-859f-5a6b-b812f347a81d",
+			"rawModeData": ""
+		},
+		{
+			"id": "26bf0471-03ca-3101-3c40-fa95a8ce56c1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/moral/27",
+			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543001092118,
+			"name": "escolar/persona/moral/4",
+			"description": "",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "2815bca2-3661-c1fb-01a9-0c44c883aaed",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/fisica/13",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"data": [],
+			"dataMode": "raw",
+			"name": "escolar/persona/fisica/13",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1542998919604,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
+			"rawModeData": "{\n    \"idPersona\": 13,\n    \"nombre\": \"juan\",\n    \"apellidoPaterno\": \"asd\",\n    \"apellidoMaterno\": \"asd\",\n    \"fechaNacimiento\": \"1991/01/15\",\n    \"sexo\": \"MASCULINO\",\n    \"persona\": {\n        \"idPersona\": 13,\n        \"rfc\": \"asdads12312\",\n        \"tipo\": \"FISICA\",\n        \"estado\": \"ACTIVO\"\n    }\n}"
+		},
+		{
+			"id": "96df6e3c-078d-4796-198b-5caa1a36f3b9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/moral/27",
+			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543001093918,
+			"name": "escolar/persona/moral/13",
+			"description": "",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"responses": [],
+			"rawModeData": "{\n    \"idPersona\": 27,\n    \"nombre\": \"patito\",\n    \"razonSocial\": \"patos sa cv\",\n    \"fechaConstitucion\": \"2018/06/11\",\n    \"persona\": {\n        \"idPersona\": 27,\n        \"rfc\": \"asdads12312\",\n        \"tipo\": \"MORAL\",\n        \"estado\": \"ACTIVO\"\n    }\n}"
+		},
+		{
+			"id": "c9f08534-d6f3-62a4-5bfe-87b8f640ef28",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/fisica/4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"data": [],
+			"dataMode": "raw",
+			"name": "escolar/persona/fisica/4",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1542413385117,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
+			"rawModeData": ""
+		},
+		{
+			"id": "d9c8ff97-8b34-0f32-129e-33058c92caa0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/moral/26",
+			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543018888953,
+			"name": "escolar/persona/moral/7",
+			"description": "",
+			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"responses": [],
+			"rawModeData": ""
+		}
+	]
+}

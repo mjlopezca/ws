@@ -1,0 +1,46 @@
+<!--  
+    <authentication-manager alias="authManager">
+   		<authentication-provider  user-service-ref="userService"/>
+   </authentication-manager>
+   
+   <jdbc-user-service id="userService" data-source-ref="dataSource"
+					  users-by-username-query="select email as username, secret as password, true as enabled from Customers where email=?"
+					  authorities-by-username-query="select email as username, rol as authorities from Customers where email=?" />
+
+  <oauth:provider consumer-details-service-ref="consumerDetails"
+                  token-services-ref="tokenServices"
+                  request-token-url="/oauth/request_token"
+                  authenticate-token-url="/oauth/authorize"
+                  authentication-failed-url="/oauth/confirm_access"
+                  access-granted-url="/request_token_authorized.jsp"
+                  access-token-url="/oauth/access_token"
+                  require10a="false"/>
+
+  <oauth:token-services id="tokenServices"/>
+  
+  <beans:bean id="accessConfirmationController" class="org.companysas.oauth2.AccessConfirmationController">
+  	  <beans:property name="tokenServices"			ref="tokenServices"/>
+      <beans:property name="consumerDetailsService" ref="consumerDetails"/>
+  </beans:bean>
+  
+   <oauth:consumer-details-service id="consumerDetails">
+    <oauth:consumer name="Tonr.com" key="tonr-consumer-key" secret="SHHHHH!!!!!!!!!!" resourceName="Your Photos" resourceDescription="Your photos that you have uploaded to sparklr.com."/>
+  </oauth:consumer-details-service>
+ -->
+ 
+ 
+ 
+  <!--        
+ 
+ http://www.springframework.org/schema/security/spring-security-3.1.xsd
+ 
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:oauth="http://spring-security-oauth.codehaus.org/3.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.0.xsd.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.xsd
+              http://spring-security-oauth.codehaus.org/3.0 http://spring-security-oauth.codehaus.org/schema/spring-security-oauth-3.0.xsd">
+ -->
