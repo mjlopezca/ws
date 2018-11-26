@@ -39,7 +39,7 @@
       <AppenderRef ref="Console" />          
     </Logger>
 
-   
+   <!-- 
      <Logger name="org.springframework.boot" level="debug" additivity="false">
       <AppenderRef ref="Console" />      
     </Logger>
@@ -52,6 +52,6 @@
     <Root level="error">      
       <AppenderRef ref="FileError" />
     </Root>
-   
+    -->
   </Loggers>
 </Configuration>
