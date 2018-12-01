@@ -1,0 +1,106 @@
+package com.escolar.persona.dao;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.escolar.enums.Estado;
+
+@Entity
+@Table(name="DIRECCION")
+public class DireccionDao  implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	Long idDireccion;
+	String calle;
+	String numeroExterior;
+	String numeroInterior;
+	int idPais;
+	int idEstado;
+	int idMunicipio;
+	String codigoPostal;
+	Long idPersona;
+	@Enumerated(EnumType.ORDINAL)
+	Estado estado;
+	public Long getIdDireccion() {
+		return idDireccion;
+	}
+	public void setIdDireccion(Long idDireccion) {
+		this.idDireccion = idDireccion;
+	}
+	public String getCalle() {
+		return calle;
+	}
+	public void setCalle(String calle) {
+		this.calle = calle;
+	}
+	public String getNumeroExterior() {
+		return numeroExterior;
+	}
+	public void setNumeroExterior(String numeroExterior) {
+		this.numeroExterior = numeroExterior;
+	}
+	public String getNumeroInterior() {
+		return numeroInterior;
+	}
+	public void setNumeroInterior(String numeroInterior) {
+		this.numeroInterior = numeroInterior;
+	}
+	public int getIdPais() {
+		return idPais;
+	}
+	public void setIdPais(int idPais) {
+		this.idPais = idPais;
+	}
+	public int getIdEstado() {
+		return idEstado;
+	}
+	public void setIdEstado(int idEstado) {
+		this.idEstado = idEstado;
+	}
+	public int getIdMunicipio() {
+		return idMunicipio;
+	}
+	public void setIdMunicipio(int idMunicipio) {
+		this.idMunicipio = idMunicipio;
+	}
+	public String getCodigoPostal() {
+		return codigoPostal;
+	}
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
+	}
+	public Long getIdPersona() {
+		return idPersona;
+	}
+	public void setIdPersona(Long idPersona) {
+		this.idPersona = idPersona;
+	}
+	public Estado getEstado() {
+		return estado;
+	}
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+	@Override
+	public String toString() {
+		return "DireccionDto [idDireccion=" + idDireccion + ", calle=" + calle + ", numeroExterior=" + numeroExterior
+				+ ", numeroInterior=" + numeroInterior + ", idPais=" + idPais + ", idEstado=" + idEstado
+				+ ", idMunicipio=" + idMunicipio + ", codigoPostal=" + codigoPostal + ", idPersona=" + idPersona
+				+ ", estado=" + estado + "]";
+	}
+		
+
+}
