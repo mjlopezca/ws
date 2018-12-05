@@ -31,3 +31,9 @@ git commit -m "mensjae commit"
 git push origin <branch>
 
 
+http://www.7sabores.com/blog/descargar-un-branch-remoto-cuando-usamos-git
+
+
+https://david-estevez.gitbooks.io/the-git-the-bad-and-the-ugly/content/es/subir-y-bajar-cambios-a-un-repositorio-remoto.html
+https://git-scm.com/book/es/v1/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio
+http://rogerdudler.github.io/git-guide/index.es.html
