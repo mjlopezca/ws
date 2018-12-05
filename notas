@@ -1,0 +1,33 @@
+ mvn install:install-file -Dfile=sca-contingencia-dto-2.12.1.jar -DgroupId=ccom.asigna.sistemacentral.contingencia -DartifactId=sca-contingencia-dto -Dversion=2.12.1 -Dpackaging=jar
+
+etc/bash.bashrc
+update-alternatives --config java
+
+
+
+
+ // Iniciar o reiniciar el servidor mysql
+sudo /etc/init.d/mysql restart
+
+// Parar el servidor mysql
+sudo /etc/init.d/mysql stop
+
+
+
+//descargar repo
+git clone URL/name.git NombreProyecto
+cd NombreProyecto
+git branch -a
+git pull origin nombre_del_branch
+git checkout -b nombre_del_branch origin/nombre_del_branch
+
+//subir cambios
+git status
+git add
+git diff
+git diff --staged //no preparado up
+git diff --cached //lo preparado up
+git commit -m "mensjae commit"
+git push origin <branch>
+
+
