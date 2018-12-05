@@ -5,12 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import com.escolar.persona.repository.TelefonoDao;
+import com.escolar.persona.dao.TelefonoDao;
+import com.escolar.persona.repository.TelefonoRepository;
 
 @Service
 public class TelefonoService extends BaseService{
 	@Autowired
-	TelefonoDao telefonoRepositorio;
+	TelefonoRepository telefonoRepositorio;
 	
 	public TelefonoDao saveTelefono(TelefonoDao telefono) {
 		boolean isTruePersona=personaService.buscarSiExiste(telefono.getIdPersona());

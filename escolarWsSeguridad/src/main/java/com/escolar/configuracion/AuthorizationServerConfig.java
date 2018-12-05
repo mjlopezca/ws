@@ -1,4 +1,4 @@
-package com.escolar.seguridad.config;
+package com.escolar.configuracion;
 
 
 import javax.sql.DataSource;
@@ -18,7 +18,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
 	static final String CLIEN_ID = "devglan-client";
-	static final String CLIENT_SECRET = "devglan-secret";
+	static final String CLIENT_SECRET = "{bcrypt}$2a$10$IaHaqf0sD08Hgjk/EtacHuicfny7fUYUsmn5F4M6uW1eimnomINym";
 	static final String GRANT_TYPE_PASSWORD = "password";
 	static final String AUTHORIZATION_CODE = "authorization_code";
     static final String REFRESH_TOKEN = "refresh_token";
@@ -42,15 +42,15 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	public void configure(ClientDetailsServiceConfigurer configurer) throws Exception {
 
 		configurer
-		.jdbc(dataSource)
+	    .jdbc(dataSource)
         .passwordEncoder(passwordEncoder());
-//				.inMemory()
-//				.withClient(CLIEN_ID)
-//				.secret(CLIENT_SECRET)
-//				.authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN, IMPLICIT )
-//				.scopes(SCOPE_READ, SCOPE_WRITE, TRUST)
-//				.accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS).
-//				refreshTokenValiditySeconds(FREFRESH_TOKEN_VALIDITY_SECONDS);
+/*				.inMemory()
+				.withClient(CLIEN_ID)
+				.secret(CLIENT_SECRET)
+				.authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN, IMPLICIT )
+				.scopes(SCOPE_READ, SCOPE_WRITE, TRUST)
+				.accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS).
+				refreshTokenValiditySeconds(FREFRESH_TOKEN_VALIDITY_SECONDS);*/
 	}
 	
 	   @Bean

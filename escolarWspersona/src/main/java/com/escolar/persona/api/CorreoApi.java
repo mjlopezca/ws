@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.escolar.persona.dao.CorreoDao;
 import com.escolar.persona.dto.CorreoDto;
 import com.escolar.persona.repository.CorreoRepository;
 import com.escolar.persona.service.impl.BaseService;
@@ -28,7 +29,7 @@ public class CorreoApi extends BaseService{
 	@RequestMapping(value="/correo", method=RequestMethod.POST)
 	public void setCorreo(@RequestBody CorreoDto correoRequest) {
 		log.info(correoRequest);			
-		CorreoRepository correoDto=mapper.map(correoRequest, CorreoRepository.class);
+		CorreoDao correoDto=mapper.map(correoRequest, CorreoDao.class);
 		correoDto=correoService.saveCorreo(correoDto);
 		log.info(correoDto);
 	}
@@ -46,9 +47,9 @@ public class CorreoApi extends BaseService{
 	
 	@RequestMapping(value="/correo/{idPersona}",method=RequestMethod.GET)
 	public List<CorreoDto> getTelefono(@PathVariable Long idPersona) {
-		List<CorreoRepository> ListCorreo=correoService.getAllCorreoPersona(idPersona);
+		List<CorreoDao> ListCorreo=correoService.getAllCorreoPersona(idPersona);
 		List<CorreoDto> listCorreoRequest=new ArrayList<CorreoDto>();
-		for(CorreoRepository correo:ListCorreo) {
+		for(CorreoDao correo:ListCorreo) {
 			listCorreoRequest.add(mapper.map(correo, CorreoDto.class));
 		}		
 		return listCorreoRequest;
@@ -57,7 +58,7 @@ public class CorreoApi extends BaseService{
 	public void updateTelefono(@PathVariable Long idPersona,@PathVariable Long idCorreo,@RequestBody CorreoDto CorreoRequest ) {
 		log.info("PUT idPersona:"+idPersona+" idTelefono:"+idCorreo);
 		log.info(CorreoRequest);
-		CorreoRepository correoUpdate=mapper.map(CorreoRequest, CorreoRepository.class);
+		CorreoDao correoUpdate=mapper.map(CorreoRequest, CorreoDao.class);
 		correoService.updateCorreo(correoUpdate, idCorreo, idPersona);	
 	}
 	

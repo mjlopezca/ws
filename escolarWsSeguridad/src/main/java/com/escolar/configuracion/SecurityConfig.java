@@ -1,4 +1,4 @@
-package com.escolar.seguridad.config;
+package com.escolar.configuracion;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

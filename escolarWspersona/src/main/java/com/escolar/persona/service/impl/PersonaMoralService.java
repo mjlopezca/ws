@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.escolar.enums.Estado;
 import com.escolar.persona.repository.PersonaRepository;
+import com.escolar.persona.dao.PersonaDao;
+import com.escolar.persona.dao.PersonaMoralDao;
 import com.escolar.persona.repository.PersonaMoralRepository;
 
 import java.util.List;
@@ -14,8 +16,8 @@ public class PersonaMoralService extends BaseService{
 	@Autowired
 	PersonaMoralRepository personaMoralRepositorio;
 	
-	public PersonaMoralRepository personaMoralSave(PersonaMoralRepository personaMoral) {		
-		PersonaRepository persona=personaService.savePersona(personaMoral.getPersona());
+	public PersonaMoralDao personaMoralSave(PersonaMoralDao personaMoral) {		
+		PersonaDao persona=personaService.savePersona(personaMoral.getPersona());
 		personaMoral.setIdPersona(persona.getIdPersona());
 		personaMoral.setPersona(persona);		
 		personaMoral=personaMoralRepositorio.save(personaMoral);
@@ -24,16 +26,16 @@ public class PersonaMoralService extends BaseService{
 		return personaMoral;
 		
 	}
-	public List<PersonaMoralRepository> getAllPersonaMoral() {
-		List<PersonaMoralRepository> listPersonaMoral= personaMoralRepositorio.findAll();
+	public List<PersonaMoralDao> getAllPersonaMoral() {
+		List<PersonaMoralDao> listPersonaMoral= personaMoralRepositorio.findAll();
 		return listPersonaMoral;
 	}
-	public PersonaMoralRepository getPersonaMoral(Long idPersona) {
-		PersonaMoralRepository personaMoral=personaMoralRepositorio.findById(idPersona).get();
+	public PersonaMoralDao getPersonaMoral(Long idPersona) {
+		PersonaMoralDao personaMoral=personaMoralRepositorio.findById(idPersona).get();
 		return personaMoral;
 	}
-	public void updatePersonaMoral(PersonaMoralRepository personaMoralUpdate, Long idPersona) {
-		PersonaMoralRepository personaActual=getPersonaMoral(idPersona);
+	public void updatePersonaMoral(PersonaMoralDao personaMoralUpdate, Long idPersona) {
+		PersonaMoralDao personaActual=getPersonaMoral(idPersona);
 		personaActual.setNombre(personaMoralUpdate.getNombre());
 		personaActual.setRazonSocial(personaMoralUpdate.getRazonSocial());
 		personaActual.setFechaConstitucion(personaMoralUpdate.getFechaConstitucion());
@@ -42,13 +44,13 @@ public class PersonaMoralService extends BaseService{
 	}
 	
 	public void deletePersonaMoral(Long idPersona) {
-		PersonaRepository personaDelete=personaService.getPersona(idPersona);
+		PersonaDao personaDelete=personaService.getPersona(idPersona);
 		personaDelete.setEstado(Estado.BAJA);
 		personaService.savePersona(personaDelete);
 		
 	}
 	public void DesactivarPersonaMoral(Long idPersona) {
-		PersonaRepository personaDelete=personaService.getPersona(idPersona);
+		PersonaDao personaDelete=personaService.getPersona(idPersona);
 		personaDelete.setEstado(Estado.INACTIVO);
 		personaService.savePersona(personaDelete);
 		

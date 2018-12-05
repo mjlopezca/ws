@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.escolar.persona.dao.TelefonoDao;
 import com.escolar.persona.dto.TelefonoDto;
-import com.escolar.persona.repository.TelefonoDao;
 import com.escolar.persona.service.impl.BaseService;
 import com.escolar.persona.service.impl.TelefonoService;;
 

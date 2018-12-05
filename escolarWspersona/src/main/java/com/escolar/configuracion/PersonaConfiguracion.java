@@ -1,4 +1,4 @@
-package com.escolar.persona;
+package com.escolar.configuracion;
 
 import org.dozer.DozerBeanMapper;
 import org.springframework.context.annotation.Bean;

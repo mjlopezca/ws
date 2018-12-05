@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.escolar.persona.dao.PersonaFisicaDao;
 import com.escolar.persona.dto.PersonaFisicaDto;
-import com.escolar.persona.repository.PersonaFisicaRepository;
 import com.escolar.persona.service.impl.BaseService;
 import com.escolar.persona.service.impl.PersonaFisicaService;
 
@@ -29,8 +29,8 @@ public class PersonaFisicaApi extends BaseService{
 	@RequestMapping(value = "/fisica",  method=RequestMethod.POST)
 	public PersonaFisicaDto CreaPersonaFisica(@RequestBody PersonaFisicaDto personaFisicaRequest) {
 		log.info("POST"+personaFisicaRequest);
-		PersonaFisicaRepository personaFisica=mapper.map(personaFisicaRequest, PersonaFisicaRepository.class);
-		PersonaFisicaRepository personaSave= personaFisicaService.personaFisicaSave(personaFisica);
+		PersonaFisicaDao personaFisica=mapper.map(personaFisicaRequest, PersonaFisicaDao.class);
+		PersonaFisicaDao personaSave= personaFisicaService.personaFisicaSave(personaFisica);
 		PersonaFisicaDto personaFisicaResponse=mapper.map(personaSave, PersonaFisicaDto.class);
 		return personaFisicaResponse;
 	}
@@ -41,9 +41,9 @@ public class PersonaFisicaApi extends BaseService{
 		log.info("GET filter"+filter);
 		log.info("fields"+fields);
 		
-		List<PersonaFisicaRepository> personaFisicaAll = personaFisicaService.getAllPersonaFisica();
+		List<PersonaFisicaDao> personaFisicaAll = personaFisicaService.getAllPersonaFisica();
 		List<PersonaFisicaDto> personaFisicaResponse=new ArrayList<PersonaFisicaDto>();
-		for(PersonaFisicaRepository personaFisica:personaFisicaAll) {
+		for(PersonaFisicaDao personaFisica:personaFisicaAll) {
 			personaFisicaResponse.add(mapper.map(personaFisica, PersonaFisicaDto.class));
 			
 		}
@@ -64,7 +64,7 @@ public class PersonaFisicaApi extends BaseService{
 	@ResponseBody 
 	public PersonaFisicaDto getPersonaFisica(@PathVariable Long idPersona) {
 		log.info("GET idPersona"+idPersona);
-		PersonaFisicaRepository personaFisica= personaFisicaService.getPersonaFisica(idPersona);
+		PersonaFisicaDao personaFisica= personaFisicaService.getPersonaFisica(idPersona);
 		log.info(personaFisica);
 		PersonaFisicaDto personaFisicaRequest=mapper.map(personaFisica, PersonaFisicaDto.class);
 		return personaFisicaRequest;
@@ -75,7 +75,7 @@ public class PersonaFisicaApi extends BaseService{
 	@ResponseStatus(value=HttpStatus.OK)	
 	public void updatePersonaFiscia(@PathVariable Long idPersona, @RequestBody PersonaFisicaDto personaFisicaRequest) {
 		log.info("idPersona"+idPersona);		
-		PersonaFisicaRepository personaFisica=mapper.map(personaFisicaRequest, PersonaFisicaRepository.class);
+		PersonaFisicaDao personaFisica=mapper.map(personaFisicaRequest, PersonaFisicaDao.class);
 		log.info(personaFisica);
 		personaFisicaService.updatePersona(personaFisica,idPersona);
 		

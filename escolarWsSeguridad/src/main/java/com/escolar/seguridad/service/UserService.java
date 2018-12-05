@@ -4,9 +4,11 @@ package com.escolar.seguridad.service;
 
 import java.util.List;
 
+import com.escolar.seguridad.dao.UserDao;
+
 public interface UserService {
 
-    User save(User user);
-    List<User> findAll();
-    void delete(long id);
+	UserDao save(UserDao user);
+    List<UserDao> findAll();
+    void delete(String id);
 }

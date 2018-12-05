@@ -1,4 +1,4 @@
-package com.escolar.persona;
+package com.escolar;
 
 
 import org.springframework.boot.SpringApplication;

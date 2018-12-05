@@ -1,6 +1,8 @@
 package com.escolar.seguridad.service.impl;
 
 
+import com.escolar.seguridad.dao.UserDao;
+import com.escolar.seguridad.repository.UserRepository;
 import com.escolar.seguridad.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,33 +22,34 @@ import java.util.List;
 public class UserServiceImpl implements UserDetailsService, UserService {
 	
 	@Autowired
-	private UserDao userDao;
+	private UserRepository userRepositorio;
 
 	public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
-		User user = userDao.findByUsername(userId);
+		System.err.println(userId);
+		UserDao user = userRepositorio.findById(userId).get();
+		System.err.println("user"+user);
 		if(user == null){
-			throw new UsernameNotFoundException("Invalid username or password.");
+			throw new UsernameNotFoundException("usuaro o contraseña invalida");
 		}
-		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthority());
+		return new org.springframework.security.core.userdetails.User(user.getClaveUsuario(), user.getPassword(), getAuthority());
 	}
 
 	private List<SimpleGrantedAuthority> getAuthority() {
 		return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMINISTRADOR"));
 	}
 
-	public List<User> findAll() {
-		List<User> list = new ArrayList<>();
-		userDao.findAll().iterator().forEachRemaining(list::add);
-		return list;
+	public List<UserDao> findAll() {
+		List<UserDao> listUser=userRepositorio.findAll();
+		return listUser;
 	}
 
 	@Override
-	public void delete(long id) {
-		userDao.delete(id);
+	public void delete(String id) {
+		userRepositorio.deleteById(id);
 	}
 
 	@Override
-    public User save(User user) {
-        return userDao.save(user);
+    public UserDao save(UserDao user) {
+        return userRepositorio.save(user);
     }
 }

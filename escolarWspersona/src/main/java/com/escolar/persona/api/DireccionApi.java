@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.escolar.persona.dao.DireccionDao;
 import com.escolar.persona.dto.DireccionDto;
 import com.escolar.persona.repository.DireccionRepository;
 import com.escolar.persona.service.impl.BaseService;
@@ -28,7 +29,7 @@ public class DireccionApi  extends BaseService{
 	@RequestMapping(value="/direccion", method=RequestMethod.POST)
 	public void setCorreo(@RequestBody DireccionDto direccionRequest) {	
 		log.info(direccionRequest);
-		DireccionRepository direcionDto=mapper.map(direccionRequest, DireccionRepository.class);
+		DireccionDao direcionDto=mapper.map(direccionRequest, DireccionDao.class);
 		log.info(direcionDto);
 		direccionService.saveDireccion(direcionDto);		
 	}
@@ -46,9 +47,9 @@ public class DireccionApi  extends BaseService{
 	
 	@RequestMapping(value="/direccion/{idPersona}",method=RequestMethod.GET)
 	public List<DireccionDto> getDirecciones(@PathVariable Long idPersona) {
-		List<DireccionRepository> listDireccion=direccionService.getAllDireccionPersona(idPersona);
+		List<DireccionDao> listDireccion=direccionService.getAllDireccionPersona(idPersona);
 		List<DireccionDto> listDireccionRequest=new ArrayList<DireccionDto>();
-		for(DireccionRepository personaFisica:listDireccion) {
+		for(DireccionDao personaFisica:listDireccion) {
 			listDireccionRequest.add(mapper.map(personaFisica, DireccionDto.class));			
 		}
 		log.info(listDireccionRequest);		
@@ -58,7 +59,7 @@ public class DireccionApi  extends BaseService{
 	public void updateTelefono(@PathVariable Long idPersona,@PathVariable Long idDireccion,@RequestBody DireccionDto direccionRequest ) {
 		log.info("PUT idPersona:"+idPersona+" idDireccion:"+idDireccion);
 		log.info(direccionRequest);
-		DireccionRepository direccionUpdate=mapper.map(direccionRequest, DireccionRepository.class);
+		DireccionDao direccionUpdate=mapper.map(direccionRequest, DireccionDao.class);
 		direccionService.updateDireccion(direccionUpdate, idDireccion, idPersona);			
 	}
 	

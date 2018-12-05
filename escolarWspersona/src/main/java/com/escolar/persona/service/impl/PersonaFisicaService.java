@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.escolar.enums.Estado;
 import com.escolar.persona.repository.PersonaRepository;
+import com.escolar.persona.dao.PersonaDao;
 import com.escolar.persona.dao.PersonaFisicaDao;
 import com.escolar.persona.repository.PersonaFisicaRepository;
 
@@ -17,7 +18,7 @@ public class PersonaFisicaService extends BaseService{
   
    public PersonaFisicaDao personaFisicaSave (PersonaFisicaDao personaFisica) {
 	   log.info(personaFisica); 
-	  PersonaRepository persona= personaService.savePersona(personaFisica.getPersona());
+	   PersonaDao persona= personaService.savePersona(personaFisica.getPersona());
 	  Long idPersona=persona.getIdPersona();
 	  personaFisica.setIdPersona(idPersona);
 	  return personaFisicaDao.save(personaFisica);
@@ -29,12 +30,12 @@ public class PersonaFisicaService extends BaseService{
    }
    
 	public void deletePersonaFisica(Long idPersona) {
-		PersonaRepository personaDelete =personaService.getPersona(idPersona);
+		PersonaDao personaDelete =personaService.getPersona(idPersona);
 		personaDelete.setEstado(Estado.BAJA);
 		personaService.savePersona(personaDelete);
 	}
 	public void DesactivarPersonaFisica(Long idPersona) {		
-		PersonaRepository personaDelete =personaService.getPersona(idPersona);
+		PersonaDao personaDelete =personaService.getPersona(idPersona);
 		personaDelete.setEstado(Estado.INACTIVO);
 		personaService.savePersona(personaDelete);
 	}

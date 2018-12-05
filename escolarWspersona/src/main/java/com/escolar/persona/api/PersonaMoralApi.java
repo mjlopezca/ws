@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.escolar.persona.dao.PersonaMoralDao;
 import com.escolar.persona.dto.PersonaMoralDto;
-import com.escolar.persona.repository.PersonaMoralRepository;
 import com.escolar.persona.service.impl.BaseService;
 import com.escolar.persona.service.impl.PersonaMoralService;
 
@@ -29,14 +29,14 @@ public class PersonaMoralApi extends BaseService{
 	@RequestMapping(value = "/moral",  method=RequestMethod.POST)
 	public void  newPersonaMoral(@RequestBody PersonaMoralDto personaMoralRequest) {
 		log.info("POST "+personaMoralRequest);
-		PersonaMoralRepository personaMoral=mapper.map(personaMoralRequest, PersonaMoralRepository.class);		
+		PersonaMoralDao personaMoral=mapper.map(personaMoralRequest, PersonaMoralDao.class);		
 		personaMoralService.personaMoralSave(personaMoral);		
 	}
 	@RequestMapping(value="/moral",method=RequestMethod.GET)
 	public List<PersonaMoralDto> getListPersonaMoral() {
-		List<PersonaMoralRepository> listPersonaMoral=personaMoralService.getAllPersonaMoral();	
+		List<PersonaMoralDao> listPersonaMoral=personaMoralService.getAllPersonaMoral();	
 		List<PersonaMoralDto> listPersonaRequestDto=new ArrayList<PersonaMoralDto>();
-		for(PersonaMoralRepository personaMoralDto:listPersonaMoral) {
+		for(PersonaMoralDao personaMoralDto:listPersonaMoral) {
 			listPersonaRequestDto.add(mapper.map(personaMoralDto,PersonaMoralDto.class));			
 		}
 		log.info(listPersonaRequestDto);
@@ -45,7 +45,7 @@ public class PersonaMoralApi extends BaseService{
 	@RequestMapping(value="/moral/{idPersona}",method=RequestMethod.GET)
 	public PersonaMoralDto getPersonaMoral(@PathVariable Long idPersona) {
 		log.info("GET idPersona "+idPersona);
-		PersonaMoralRepository personaMoralDto=personaMoralService.getPersonaMoral(idPersona);
+		PersonaMoralDao personaMoralDto=personaMoralService.getPersonaMoral(idPersona);
 		PersonaMoralDto personaMoralRequestDto=mapper.map(personaMoralDto, PersonaMoralDto.class);
 		log.info(personaMoralRequestDto);
 		return personaMoralRequestDto;
@@ -55,7 +55,7 @@ public class PersonaMoralApi extends BaseService{
 	public void updatePersonaMoral(@PathVariable Long idPersona,@RequestBody PersonaMoralDto personaMoralRequestDto ) {
 		log.info("PUT idPersona:"+idPersona);
 		log.info(personaMoralRequestDto);
-		PersonaMoralRepository personaMoralDto=mapper.map(personaMoralRequestDto, PersonaMoralRepository.class);
+		PersonaMoralDao personaMoralDto=mapper.map(personaMoralRequestDto, PersonaMoralDao.class);
 		personaMoralService.updatePersonaMoral(personaMoralDto, idPersona);
 	}
 	

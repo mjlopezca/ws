@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.escolar.persona.dto.CorreoDto;
-import com.escolar.persona.repository.CorreoRepository;
+import com.escolar.persona.dao.CorreoDao;
 
-public interface CorreoRepository  extends JpaRepository<CorreoDto, Long>{
-	List<CorreoDto> findByIdPersona(Long idPersona);
-	CorreoDto findByIdCorreoAndIdPersona(Long idCorreo,Long idPersona);
+
+public interface CorreoRepository  extends JpaRepository<CorreoDao, Long>{
+	List<CorreoDao> findByIdPersona(Long idPersona);
+	CorreoDao findByIdCorreoAndIdPersona(Long idCorreo,Long idPersona);
 }

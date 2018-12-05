@@ -1,4 +1,4 @@
-package com.escolar.seguridad;
+package com.escolar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

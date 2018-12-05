@@ -4,6 +4,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
+
+import com.escolar.persona.dao.CorreoDao;
 import com.escolar.persona.dto.CorreoDto;
 import com.escolar.persona.repository.CorreoRepository;
 
@@ -14,7 +16,7 @@ public class CorreoService extends BaseService{
 	CorreoRepository correoRepositorio;
 	
 	
-	public CorreoDto saveCorreo(CorreoDto correo) {
+	public CorreoDao saveCorreo(CorreoDao correo) {
 		log.info(correo);
 		boolean isTruePersona=personaService.buscarSiExiste(correo.getIdPersona());
 		Assert.isTrue(isTruePersona,"no se encontro persona con el id:"+correo.getIdPersona());
@@ -22,22 +24,22 @@ public class CorreoService extends BaseService{
 		log.info(correo);
 		return correo;
 	}
-	public List<CorreoDto> getAllCorreo() {
-		List<CorreoDto> listCorreo=correoRepositorio.findAll();
+	public List<CorreoDao> getAllCorreo() {
+		List<CorreoDao> listCorreo=correoRepositorio.findAll();
 		return listCorreo;
 	}
-	public CorreoDto getCorreo(Long idCorreo,Long idPersona) {
-		CorreoDto correo=correoRepositorio.findByIdCorreoAndIdPersona(idCorreo, idPersona);
+	public CorreoDao getCorreo(Long idCorreo,Long idPersona) {
+		CorreoDao correo=correoRepositorio.findByIdCorreoAndIdPersona(idCorreo, idPersona);
 		return correo;
 	}
-	public List<CorreoDto> getAllCorreoPersona(Long idPersona){
+	public List<CorreoDao> getAllCorreoPersona(Long idPersona){
 		log.info(idPersona);
-		List<CorreoDto> listCorreoPersona=correoRepositorio.findByIdPersona(idPersona);
+		List<CorreoDao> listCorreoPersona=correoRepositorio.findByIdPersona(idPersona);
 		log.info(listCorreoPersona);
 		return listCorreoPersona;
 	}
-	public void updateCorreo(CorreoDto correUpdate, Long idCorreo,Long idPersona) {
-		CorreoDto correoActual=getCorreo(idCorreo,idPersona);
+	public void updateCorreo(CorreoDao correUpdate, Long idCorreo,Long idPersona) {
+		CorreoDao correoActual=getCorreo(idCorreo,idPersona);
 		Assert.notNull(correoActual,"no se encontro el correo para la persona con id:"+idPersona+" idCorreo:"+idCorreo);
 		correoActual.setCorreo(correUpdate.getCorreo());
 		correoActual.setEstado(correUpdate.getEstado());
@@ -45,7 +47,7 @@ public class CorreoService extends BaseService{
 		saveCorreo(correoActual);
 	}
 	public void deleteCorreo(Long idCorreo,Long idPersona) {
-		CorreoDto correoDelete=getCorreo(idCorreo,idPersona);
+		CorreoDao correoDelete=getCorreo(idCorreo,idPersona);
 		Assert.notNull(correoDelete,"no se encontro el correo para la persona con id:"+idPersona+" idCorreo:"+idCorreo);
 		log.info(correoDelete);	
 		correoRepositorio.delete(correoDelete);
