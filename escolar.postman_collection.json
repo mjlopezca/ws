@@ -1,146 +1,95 @@
 {
-	"id": "e245ee48-2c43-e99d-e670-56ddee582f73",
+	"id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 	"name": "escolar",
 	"description": "",
-	"order": [],
+	"order": [
+		"0997c797-6495-efc7-0a05-4f95eb1252e0"
+	],
 	"folders": [
 		{
-			"name": "PersonaFisica",
+			"name": "Correo",
 			"description": "",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"order": [
-				"c9f08534-d6f3-62a4-5bfe-87b8f640ef28",
-				"0be634be-7d23-6d76-984e-55473c140c04",
-				"1c55ea21-655a-859f-5a6b-b812f347a81d",
-				"2815bca2-3661-c1fb-01a9-0c44c883aaed"
+				"b4c29f05-eb2f-079a-e850-5f0fc410d77b",
+				"d605f5e4-af51-745a-43dd-82aa4dba7650",
+				"3d28bc4d-95f6-e430-70fe-1a71500ce142",
+				"ac00db79-3c44-fefe-d7b0-d3fc28fe1c6b"
 			],
 			"owner": 0,
 			"folders_order": [],
-			"id": "c9f8e728-795d-5c82-9eb5-835045bcce8d"
+			"id": "373a116d-0cef-1a38-6cdf-81333617a585"
+		},
+		{
+			"name": "Direccion",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"order": [
+				"60465658-107b-1e7a-bf40-300c702b6b5d",
+				"5517e58b-6e21-9d30-6174-4dcfcecf99f7",
+				"54af7d1c-4fa8-1c0f-3b85-49b8f743ec7c",
+				"aa81ce54-b3fd-a349-0090-5f820bdbc4d3"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "163b3fc2-0264-1383-8da8-76de13f6e739"
+		},
+		{
+			"name": "PersonaFisica",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"order": [
+				"dcc1168e-371b-1071-4dcb-553cdfc92416",
+				"db8343b3-354e-5df6-6488-aa2cc912db69",
+				"6952b479-64ae-443f-11e3-b679c0e0d079",
+				"cd4f3a85-5d2d-6590-1b15-fca232baa2a0"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "5e1ea74d-d535-0dcf-8a21-b7d9900206d1"
 		},
 		{
 			"name": "PersonaMoral",
 			"description": "",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"order": [
-				"26bf0471-03ca-3101-3c40-fa95a8ce56c1",
-				"15bfeaac-463a-7fec-e85d-434ba4c58d85",
-				"d9c8ff97-8b34-0f32-129e-33058c92caa0",
-				"96df6e3c-078d-4796-198b-5caa1a36f3b9"
+				"06c54008-71d1-68a6-c9bf-dd2134adb09a",
+				"3ea8333f-960d-0796-2c4c-b574ee728459",
+				"f00853e5-3dc2-d645-ed96-b572e242eb03",
+				"c522779c-c800-d397-b5e5-7002be299198"
 			],
 			"owner": 0,
 			"folders_order": [],
-			"id": "ac795d9d-5b0e-11ab-0d90-7d393d193142"
+			"id": "05087d82-4e55-d22a-0dd0-889803a26ca6"
+		},
+		{
+			"name": "Telefono",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"order": [
+				"24c52bf1-323a-8e20-d94c-593c28714db6",
+				"d6b7adf9-cbac-c093-85b3-7dc20de6d2b4",
+				"ad00e329-0106-af2d-0385-beb417efa823",
+				"a911adf2-95d6-da35-5a7f-8d131a419836"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "7e0668f6-5d81-2ece-cb6e-e02df995915d"
 		}
 	],
 	"folders_order": [
-		"c9f8e728-795d-5c82-9eb5-835045bcce8d",
-		"ac795d9d-5b0e-11ab-0d90-7d393d193142"
+		"5e1ea74d-d535-0dcf-8a21-b7d9900206d1",
+		"05087d82-4e55-d22a-0dd0-889803a26ca6",
+		"7e0668f6-5d81-2ece-cb6e-e02df995915d",
+		"373a116d-0cef-1a38-6cdf-81333617a585",
+		"163b3fc2-0264-1383-8da8-76de13f6e739"
 	],
 	"timestamp": 1542413365213,
 	"owner": 0,
 	"public": false,
 	"requests": [
 		{
-			"id": "0be634be-7d23-6d76-984e-55473c140c04",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/escolar/persona/fisica",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
-			"data": [],
-			"dataMode": "raw",
-			"name": "escolar/persona/fisica",
-			"description": "post",
-			"descriptionFormat": "html",
-			"time": 1542413371849,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"isFromCollection": true,
-			"collectionRequestId": "0be634be-7d23-6d76-984e-55473c140c04",
-			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
-			"rawModeData": "{\n\t\"nombre\":\"manuel\",\n\t\"apellidoPaterno\":\"asd\",\n\t\"apellidoMaterno\":\"asd\",\n\t\"fechaNacimiento\":\"2018/06/12\",\n\t\"sexo\":\"MASCULINO\",\n\t\"persona\":{\n\t\t\"rfc\":\"asdads12312\",\n\t\t\"tipo\":\"FISICA\",\n\t\t\"estado\":\"ACTIVO\"\n\t\t\n\t}\n}"
-		},
-		{
-			"id": "15bfeaac-463a-7fec-e85d-434ba4c58d85",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/escolar/persona/moral",
-			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1542999297781,
-			"name": "escolar/persona/moral",
-			"description": "post",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
-			"responses": [],
-			"rawModeData": "{\n\t\"nombre\":\"patito\",\n\t\"razonSocial\":\"patito sa cv\",\n\t\"fechaConstitucion\":\"2018/06/12\",\n\t\"sexo\":\"MASCULINO\",\n\t\"persona\":{\n\t\t\"rfc\":\"asdads12312\",\n\t\t\"tipo\":\"MORAL\",\n\t\t\"estado\":\"ACTIVO\"\n\t\t\n\t}\n}"
-		},
-		{
-			"id": "1c55ea21-655a-859f-5a6b-b812f347a81d",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/escolar/persona/fisica/",
-			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1542998570803,
-			"name": "escolar/persona/fisica/7",
-			"description": "",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
-			"responses": [],
-			"isFromCollection": true,
-			"collectionRequestId": "1c55ea21-655a-859f-5a6b-b812f347a81d",
-			"rawModeData": ""
-		},
-		{
-			"id": "26bf0471-03ca-3101-3c40-fa95a8ce56c1",
+			"id": "06c54008-71d1-68a6-c9bf-dd2134adb09a",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -151,7 +100,7 @@
 				}
 			],
 			"url": "http://localhost:8080/escolar/persona/moral/27",
-			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
+			"folder": "05087d82-4e55-d22a-0dd0-889803a26ca6",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -166,12 +115,441 @@
 			"time": 1543001092118,
 			"name": "escolar/persona/moral/4",
 			"description": "",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"responses": [],
-			"rawModeData": ""
+			"rawModeData": "",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
 		},
 		{
-			"id": "2815bca2-3661-c1fb-01a9-0c44c883aaed",
+			"id": "0997c797-6495-efc7-0a05-4f95eb1252e0",
+			"headers": "Authorization: Basic dXN1YXJpbzpjb250cmFTZWNyZXRh\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic dXN1YXJpbzpjb250cmFTZWNyZXRh",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/oauth/token",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "manuel_lopez",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "contraseña",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1544037848814,
+			"name": "seguridad",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": []
+		},
+		{
+			"id": "24c52bf1-323a-8e20-d94c-593c28714db6",
+			"headers": "Authorization: Basic Og==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic Og==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/telefono/13",
+			"folder": "7e0668f6-5d81-2ece-cb6e-e02df995915d",
+			"queryParams": [
+				{
+					"key": "idPersona",
+					"value": "13",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543365907668,
+			"name": "escolar/telefono",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": []
+		},
+		{
+			"id": "3d28bc4d-95f6-e430-70fe-1a71500ce142",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/correo/13/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8080/escolar/correo/13/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1543366613963,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "373a116d-0cef-1a38-6cdf-81333617a585",
+			"rawModeData": " {\n        \"idCorreo\": 1,\n        \"correo\": \"asdasdads@asd.com\",\n        \"estado\": \"ACTIVO\",\n        \"idPersona\": 13,\n        \"principal\": \"SI\"\n    }"
+		},
+		{
+			"id": "3ea8333f-960d-0796-2c4c-b574ee728459",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/moral",
+			"folder": "05087d82-4e55-d22a-0dd0-889803a26ca6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542999297781,
+			"name": "escolar/persona/moral",
+			"description": "post",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": [],
+			"rawModeData": "{\n\t\"nombre\":\"patito\",\n\t\"razonSocial\":\"patito sa cv\",\n\t\"fechaConstitucion\":\"2018/06/12\",\n\t\"sexo\":\"MASCULINO\",\n\t\"persona\":{\n\t\t\"rfc\":\"asdads12312\",\n\t\t\"tipo\":\"MORAL\",\n\t\t\"estado\":\"ACTIVO\"\n\t\t\n\t}\n}",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
+		},
+		{
+			"id": "54af7d1c-4fa8-1c0f-3b85-49b8f743ec7c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/direccion/13/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8080/escolar/direccion/13/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1543432647003,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "163b3fc2-0264-1383-8da8-76de13f6e739",
+			"rawModeData": "  {\n        \"calle\": \"siempre viva\",\n        \"numeroExterior\": \"B9\",\n        \"numeroInterior\": \"c1\",\n        \"idPais\": 13,\n        \"idEstado\": 13,\n        \"idMunicipio\": 13,\n        \"codigoPostal\":\"b1832a\",\n        \"idPersona\": 13,\n        \"estado\":\"ACTIVO\"\n       \n    }"
+		},
+		{
+			"id": "5517e58b-6e21-9d30-6174-4dcfcecf99f7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/direccion/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": [],
+			"dataMode": "raw",
+			"name": "escolar/direccion/",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1543430812049,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "163b3fc2-0264-1383-8da8-76de13f6e739",
+			"rawModeData": "  {\n        \"calle\": \"siempre viva\",\n        \"numeroExterior\": \"B9\",\n        \"numeroInterior\": \"c1\",\n        \"idPais\": 13,\n        \"idEstado\": 13,\n        \"idMunicipio\": 13,\n        \"codigoPostal\":\"b1832a\",\n        \"idPersona\": 13,\n        \"estado\":\"ACTIVO\"\n       \n    }"
+		},
+		{
+			"id": "60465658-107b-1e7a-bf40-300c702b6b5d",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/escolar/direccion/13",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": null,
+			"dataMode": "params",
+			"name": "escolar/direccion/13",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1543430065021,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "163b3fc2-0264-1383-8da8-76de13f6e739"
+		},
+		{
+			"id": "6952b479-64ae-443f-11e3-b679c0e0d079",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/fisica/",
+			"folder": "5e1ea74d-d535-0dcf-8a21-b7d9900206d1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542998570803,
+			"name": "escolar/persona/fisica/7",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": [],
+			"isFromCollection": true,
+			"rawModeData": "",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
+		},
+		{
+			"id": "a911adf2-95d6-da35-5a7f-8d131a419836",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/escolar/telefono/13/3",
+			"folder": "7e0668f6-5d81-2ece-cb6e-e02df995915d",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543363913183,
+			"name": "http://localhost:8080/escolar/telefono/13/1",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": []
+		},
+		{
+			"id": "aa81ce54-b3fd-a349-0090-5f820bdbc4d3",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/escolar/direccion/13/3",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/escolar/direccion/13/3",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1543452350421,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "163b3fc2-0264-1383-8da8-76de13f6e739"
+		},
+		{
+			"id": "ac00db79-3c44-fefe-d7b0-d3fc28fe1c6b",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/escolar/correo/13/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/escolar/correo/13/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1543366663770,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "373a116d-0cef-1a38-6cdf-81333617a585"
+		},
+		{
+			"id": "ad00e329-0106-af2d-0385-beb417efa823",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/telefono/13/3",
+			"folder": "7e0668f6-5d81-2ece-cb6e-e02df995915d",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543363900319,
+			"name": "escolar/telefono/13/1",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": [],
+			"rawModeData": " {\n        \"idTelefono\": 3,\n        \"numero\": 303939393,\n        \"estado\": \"ACTIVO\",\n        \"idPersona\": 13,\n        \"tipo\": \"CASA\"\n    }"
+		},
+		{
+			"id": "b4c29f05-eb2f-079a-e850-5f0fc410d77b",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/escolar/correo/13",
+			"folder": "373a116d-0cef-1a38-6cdf-81333617a585",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543365955331,
+			"name": "escolar/correo/13",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": []
+		},
+		{
+			"id": "c522779c-c800-d397-b5e5-7002be299198",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/moral/27",
+			"folder": "05087d82-4e55-d22a-0dd0-889803a26ca6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1543001093918,
+			"name": "escolar/persona/moral/13",
+			"description": "",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"responses": [],
+			"rawModeData": "{\n    \"idPersona\": 27,\n    \"nombre\": \"patito\",\n    \"razonSocial\": \"patos sa cv\",\n    \"fechaConstitucion\": \"2018/06/11\",\n    \"persona\": {\n        \"idPersona\": 27,\n        \"rfc\": \"asdads12312\",\n        \"tipo\": \"MORAL\",\n        \"estado\": \"ACTIVO\"\n    }\n}",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
+		},
+		{
+			"id": "cd4f3a85-5d2d-6590-1b15-fca232baa2a0",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -187,7 +565,7 @@
 			"pathVariableData": [],
 			"preRequestScript": null,
 			"method": "PUT",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"data": [],
 			"dataMode": "raw",
 			"name": "escolar/persona/fisica/13",
@@ -199,11 +577,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
-			"rawModeData": "{\n    \"idPersona\": 13,\n    \"nombre\": \"juan\",\n    \"apellidoPaterno\": \"asd\",\n    \"apellidoMaterno\": \"asd\",\n    \"fechaNacimiento\": \"1991/01/15\",\n    \"sexo\": \"MASCULINO\",\n    \"persona\": {\n        \"idPersona\": 13,\n        \"rfc\": \"asdads12312\",\n        \"tipo\": \"FISICA\",\n        \"estado\": \"ACTIVO\"\n    }\n}"
+			"folder": "5e1ea74d-d535-0dcf-8a21-b7d9900206d1",
+			"rawModeData": "{\n    \"idPersona\": 13,\n    \"nombre\": \"juan\",\n    \"apellidoPaterno\": \"asd\",\n    \"apellidoMaterno\": \"asd\",\n    \"fechaNacimiento\": \"1991/01/15\",\n    \"sexo\": \"MASCULINO\",\n    \"persona\": {\n        \"idPersona\": 13,\n        \"rfc\": \"asdads12312\",\n        \"tipo\": \"FISICA\",\n        \"estado\": \"ACTIVO\"\n    }\n}",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
 		},
 		{
-			"id": "96df6e3c-078d-4796-198b-5caa1a36f3b9",
+			"id": "d605f5e4-af51-745a-43dd-82aa4dba7650",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -213,28 +592,93 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:8080/escolar/persona/moral/27",
-			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
+			"url": "http://localhost:8080/escolar/correo",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8080/escolar/correo",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1543366448361,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "373a116d-0cef-1a38-6cdf-81333617a585",
+			"rawModeData": "  {\n       \n        \"correo\": \"mjlopez@asd.com\",\n        \"estado\": \"ACTIVO\",\n        \"idPersona\": 13,\n        \"principal\": \"SI\"\n    }"
+		},
+		{
+			"id": "d6b7adf9-cbac-c093-85b3-7dc20de6d2b4",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/telefono",
+			"folder": "7e0668f6-5d81-2ece-cb6e-e02df995915d",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"method": "PUT",
+			"method": "POST",
 			"data": [],
 			"dataMode": "raw",
-			"version": 2,
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1543001093918,
-			"name": "escolar/persona/moral/13",
+			"time": 1543359382391,
+			"name": "escolar/telefono",
 			"description": "",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"responses": [],
-			"rawModeData": "{\n    \"idPersona\": 27,\n    \"nombre\": \"patito\",\n    \"razonSocial\": \"patos sa cv\",\n    \"fechaConstitucion\": \"2018/06/11\",\n    \"persona\": {\n        \"idPersona\": 27,\n        \"rfc\": \"asdads12312\",\n        \"tipo\": \"MORAL\",\n        \"estado\": \"ACTIVO\"\n    }\n}"
+			"rawModeData": "{\n\t\"numero\":55332211,\n\t\"estado\":\"ACTIVO\",\n\t\"idPersona\":13,\n\t\"tipo\":\"CELULAR\"\n}"
 		},
 		{
-			"id": "c9f08534-d6f3-62a4-5bfe-87b8f640ef28",
+			"id": "db8343b3-354e-5df6-6488-aa2cc912db69",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/escolar/persona/fisica",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": [],
+			"dataMode": "raw",
+			"name": "escolar/persona/fisica",
+			"description": "post",
+			"descriptionFormat": "html",
+			"time": 1542413371849,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"folder": "5e1ea74d-d535-0dcf-8a21-b7d9900206d1",
+			"rawModeData": "{\n\t\"nombre\":\"manuel\",\n\t\"apellidoPaterno\":\"asd\",\n\t\"apellidoMaterno\":\"asd\",\n\t\"fechaNacimiento\":\"2018/06/12\",\n\t\"sexo\":\"MASCULINO\",\n\t\"persona\":{\n\t\t\"rfc\":\"asdads12312\",\n\t\t\"tipo\":\"FISICA\",\n\t\t\"estado\":\"ACTIVO\"\n\t\t\n\t}\n}",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
+		},
+		{
+			"id": "dcc1168e-371b-1071-4dcb-553cdfc92416",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -250,7 +694,7 @@
 			"pathVariableData": [],
 			"preRequestScript": null,
 			"method": "DELETE",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"data": [],
 			"dataMode": "raw",
 			"name": "escolar/persona/fisica/4",
@@ -262,11 +706,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "c9f8e728-795d-5c82-9eb5-835045bcce8d",
-			"rawModeData": ""
+			"folder": "5e1ea74d-d535-0dcf-8a21-b7d9900206d1",
+			"rawModeData": "",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
 		},
 		{
-			"id": "d9c8ff97-8b34-0f32-129e-33058c92caa0",
+			"id": "f00853e5-3dc2-d645-ed96-b572e242eb03",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -277,7 +722,7 @@
 				}
 			],
 			"url": "http://localhost:8080/escolar/persona/moral/26",
-			"folder": "ac795d9d-5b0e-11ab-0d90-7d393d193142",
+			"folder": "05087d82-4e55-d22a-0dd0-889803a26ca6",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -292,9 +737,10 @@
 			"time": 1543018888953,
 			"name": "escolar/persona/moral/7",
 			"description": "",
-			"collectionId": "e245ee48-2c43-e99d-e670-56ddee582f73",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"responses": [],
-			"rawModeData": ""
+			"rawModeData": "",
+			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
 		}
 	]
 }
