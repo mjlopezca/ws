@@ -3,7 +3,8 @@
 	"name": "escolar",
 	"description": "",
 	"order": [
-		"0997c797-6495-efc7-0a05-4f95eb1252e0"
+		"0997c797-6495-efc7-0a05-4f95eb1252e0",
+		"6acb7e5a-2291-c677-d478-f3b67209fde1"
 	],
 	"folders": [
 		{
@@ -165,7 +166,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1544037848814,
+			"time": 1544055432088,
 			"name": "seguridad",
 			"description": "",
 			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
@@ -372,9 +373,17 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:8080/escolar/persona/fisica/",
+			"url": "http://localhost:8080/escolar/persona/fisica?access_token=a637a635-b6bb-4fe1-948f-c0d35a56a6be",
 			"folder": "5e1ea74d-d535-0dcf-8a21-b7d9900206d1",
-			"queryParams": [],
+			"queryParams": [
+				{
+					"key": "access_token",
+					"value": "a637a635-b6bb-4fe1-948f-c0d35a56a6be",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
 			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
@@ -385,14 +394,43 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1542998570803,
+			"time": 1544053646741,
 			"name": "escolar/persona/fisica/7",
 			"description": "",
 			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
 			"responses": [],
-			"isFromCollection": true,
-			"rawModeData": "",
-			"collection_id": "03d3cd04-d2f1-992d-97c1-1fb0389e1743"
+			"rawModeData": ""
+		},
+		{
+			"id": "6acb7e5a-2291-c677-d478-f3b67209fde1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/users/user?access_token=5e783875-ea98-45d6-a955-87099c4a192f",
+			"queryParams": [
+				{
+					"key": "access_token",
+					"value": "5e783875-ea98-45d6-a955-87099c4a192f",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "03d3cd04-d2f1-992d-97c1-1fb0389e1743",
+			"data": null,
+			"dataMode": "params",
+			"name": "usuarios",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1544110397201,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
 		},
 		{
 			"id": "a911adf2-95d6-da35-5a7f-8d131a419836",

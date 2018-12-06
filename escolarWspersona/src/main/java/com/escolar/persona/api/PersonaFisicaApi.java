@@ -42,7 +42,7 @@ public class PersonaFisicaApi extends BaseService{
 	
 	
 	@RequestMapping(value = "/fisica", method = RequestMethod.GET)	
-	@PreAuthorize("#oauth2.isUser() and hasRole('ROLE_ADMINISTRADOR') and #oauth2.hasScope('read')")
+	@PreAuthorize("hasRole('ROLE_ADMINISTRADOR') and #oauth2.hasScope('read')")
 	@ResponseBody 
 	public List<PersonaFisicaDto> getAllPersonaFisica(@RequestParam(required=false, value="q") String filter, @RequestParam(required=false, value="fields") String fields) {
 		log.info("GET filter"+filter);

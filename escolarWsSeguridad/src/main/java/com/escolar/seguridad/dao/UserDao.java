@@ -2,11 +2,20 @@ package com.escolar.seguridad.dao;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="SEGURIDAD_USUARIO")
-public class UserDao {
+public class UserDao implements Serializable {
+	
+	
+    private static final long serialVersionUID = 1l;
 
     @Id
     @Column
@@ -16,8 +25,19 @@ public class UserDao {
     private String password;
     @Column(nullable=true)
     private Long idPersona;
-    @Column
-    private int idEstatus;
+    
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinTable(name = "SEGURIDAD_ROL_USUARIO",
+        joinColumns = @JoinColumn(name = "clave_usuario"),
+        inverseJoinColumns = @JoinColumn(name = "id_rol"))
+    private Set<SeguridadRolDao> listRoles = new HashSet<>();
+
+  
+   
+	@Column
+    private int idEstado;
+    
+    
 	public String getClaveUsuario() {
 		return claveUsuario;
 	}
@@ -36,17 +56,22 @@ public class UserDao {
 	public void setIdPersona(Long idPersona) {
 		this.idPersona = idPersona;
 	}
-	public int getIdEstatus() {
-		return idEstatus;
+	public int getIdEstado() {
+		return idEstado;
 	}
-	public void setIdEstatus(int idEstatus) {
-		this.idEstatus = idEstatus;
+	public void setIdEstado(int idEstado) {
+		this.idEstado = idEstado;
+	}
+	public Set<SeguridadRolDao> getListRoles() {
+		return listRoles;
+	}
+	public void setListRoles(Set<SeguridadRolDao> listRoles) {
+		this.listRoles = listRoles;
 	}
 	@Override
 	public String toString() {
 		return "UserDao [claveUsuario=" + claveUsuario + ", password=" + password + ", idPersona=" + idPersona
-				+ ", idEstatus=" + idEstatus + "]";
+				+ ", listRoles=" + listRoles + ", idEstado=" + idEstado + "]";
 	}
-
    
 }
