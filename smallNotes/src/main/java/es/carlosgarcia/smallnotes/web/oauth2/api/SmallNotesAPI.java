@@ -70,7 +70,7 @@ public class SmallNotesAPI implements InitializingBean {
 	 * @return Note list of the logged user.
 	 */
 	@RequestMapping(value = "/api/notes", method = RequestMethod.GET)
-	@PreAuthorize("#oauth2.isUser() and #oauth2.clientHasRole('ROLE_USER') and #oauth2.hasScope('read')")
+	@PreAuthorize("#oauth2.isUser() and #oauth2.clientHasRole('ROLE_ADMINISTRADOR') and #oauth2.hasScope('read')")
 	@ResponseBody 
 	public List<Note> getNotes(@RequestParam(required=false, value="q") String filter, @RequestParam(required=false, value="fields") String fields) {
 		logger.debug("SmallNotesAPIImpl.getNotes. filter {}, fields {}", filter, fields);

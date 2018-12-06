@@ -3,8 +3,12 @@ package com.escolar.persona.api;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +22,7 @@ import com.escolar.persona.dao.PersonaFisicaDao;
 import com.escolar.persona.dto.PersonaFisicaDto;
 import com.escolar.persona.service.impl.BaseService;
 import com.escolar.persona.service.impl.PersonaFisicaService;
+
 
 
 @RestController
@@ -35,12 +40,14 @@ public class PersonaFisicaApi extends BaseService{
 		return personaFisicaResponse;
 	}
 	
-	@RequestMapping(value = "/fisica", method = RequestMethod.GET)
+	
+	@RequestMapping(value = "/fisica", method = RequestMethod.GET)	
+	@PreAuthorize("#oauth2.isUser() and hasRole('ROLE_ADMINISTRADOR') and #oauth2.hasScope('read')")
 	@ResponseBody 
 	public List<PersonaFisicaDto> getAllPersonaFisica(@RequestParam(required=false, value="q") String filter, @RequestParam(required=false, value="fields") String fields) {
 		log.info("GET filter"+filter);
 		log.info("fields"+fields);
-		
+		getLoggedUser();
 		List<PersonaFisicaDao> personaFisicaAll = personaFisicaService.getAllPersonaFisica();
 		List<PersonaFisicaDto> personaFisicaResponse=new ArrayList<PersonaFisicaDto>();
 		for(PersonaFisicaDao personaFisica:personaFisicaAll) {
@@ -80,4 +87,15 @@ public class PersonaFisicaApi extends BaseService{
 		personaFisicaService.updatePersona(personaFisica,idPersona);
 		
 	}
+	
+	private void getLoggedUser(){
+		String email =  null;
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		Object	   principal  = authentication.getPrincipal();
+		
+		log.info(principal);
+		
+//		return user;
+	}
+
 }
