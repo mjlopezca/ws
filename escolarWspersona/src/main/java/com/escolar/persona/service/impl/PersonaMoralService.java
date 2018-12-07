@@ -12,7 +12,7 @@ import com.escolar.persona.repository.PersonaMoralRepository;
 import java.util.List;
 
 @Service
-public class PersonaMoralService extends BaseService{
+public class PersonaMoralService extends PersonaBaseService{
 	@Autowired
 	PersonaMoralRepository personaMoralRepositorio;
 	

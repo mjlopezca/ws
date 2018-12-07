@@ -9,7 +9,7 @@ import com.escolar.persona.dao.TelefonoDao;
 import com.escolar.persona.repository.TelefonoRepository;
 
 @Service
-public class TelefonoService extends BaseService{
+public class TelefonoService extends PersonaBaseService{
 	@Autowired
 	TelefonoRepository telefonoRepositorio;
 	

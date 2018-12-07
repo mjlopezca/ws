@@ -11,7 +11,7 @@ import com.escolar.persona.repository.PersonaFisicaRepository;
 
 
 @Service
-public class PersonaFisicaService extends BaseService{
+public class PersonaFisicaService extends PersonaBaseService{
 	
    @Autowired
    PersonaFisicaRepository personaFisicaDao;

@@ -6,20 +6,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import com.escolar.persona.dao.CorreoDao;
-import com.escolar.persona.dto.CorreoDto;
 import com.escolar.persona.repository.CorreoRepository;
 
 
 @Service
-public class CorreoService extends BaseService{
+public class CorreoService extends PersonaBaseService{
 	@Autowired
 	CorreoRepository correoRepositorio;
 	
 	
 	public CorreoDao saveCorreo(CorreoDao correo) {
-		log.info(correo);
-		boolean isTruePersona=personaService.buscarSiExiste(correo.getIdPersona());
-		Assert.isTrue(isTruePersona,"no se encontro persona con el id:"+correo.getIdPersona());
+		log.info(correo);	
 		correo=correoRepositorio.save(correo);
 		log.info(correo);
 		return correo;
@@ -34,6 +31,8 @@ public class CorreoService extends BaseService{
 	}
 	public List<CorreoDao> getAllCorreoPersona(Long idPersona){
 		log.info(idPersona);
+		boolean isTruePersona=personaService.buscarSiExiste(idPersona);
+		Assert.isTrue(isTruePersona,"no se encontro persona con el id:"+idPersona);
 		List<CorreoDao> listCorreoPersona=correoRepositorio.findByIdPersona(idPersona);
 		log.info(listCorreoPersona);
 		return listCorreoPersona;

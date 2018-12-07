@@ -9,7 +9,7 @@ import com.escolar.persona.dao.PersonaDao;
 import com.escolar.persona.repository.PersonaRepository;
 
 @Service
-public class PersonaService extends BaseService{
+public class PersonaService extends PersonaBaseService{
 	@Autowired
 	PersonaRepository personaRepositorio;
 	

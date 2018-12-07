@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class BaseService {
+public class PersonaBaseService {
 	
 	protected final Logger log = LogManager.getLogger(getClass());
 	
