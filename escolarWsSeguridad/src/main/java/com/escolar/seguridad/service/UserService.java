@@ -11,4 +11,5 @@ public interface UserService {
 	UserDao save(UserDao user);
     List<UserDao> findAll();
     void delete(String id);
+    UserDao getUser(String claveUsuario);
 }

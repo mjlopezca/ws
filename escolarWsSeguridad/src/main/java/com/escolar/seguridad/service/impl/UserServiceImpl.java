@@ -11,11 +11,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -60,4 +58,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     public UserDao save(UserDao user) {
         return userRepositorio.save(user);
     }
+	
+	public UserDao getUser(String claveUsuario) {
+		return userRepositorio.findById(claveUsuario).get();
+	}
 }

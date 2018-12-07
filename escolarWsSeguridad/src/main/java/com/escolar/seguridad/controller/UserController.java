@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private UserService userService;
    
-    @PreAuthorize("hasRole('ROLE_USUARIO') and #oauth2.hasScope('read')")
+    @PreAuthorize("#oauth2.isUser() and hasRole('ROLE_USUARIO') and #oauth2.hasScope('read')")
     @RequestMapping(value="/user", method = RequestMethod.GET)
     public List<UserDao> listUser(){
     	System.err.println("entre perros");

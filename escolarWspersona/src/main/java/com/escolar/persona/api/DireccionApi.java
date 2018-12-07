@@ -4,29 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.escolar.persona.dao.DireccionDao;
 import com.escolar.persona.dto.DireccionDto;
-import com.escolar.persona.repository.DireccionRepository;
-import com.escolar.persona.service.impl.BaseService;
 import com.escolar.persona.service.impl.DireccionService;
 
 
 
 @RestController
 @RequestMapping("escolar")
-public class DireccionApi  extends BaseService{
+public class DireccionApi  extends PersonaApiHelper{
 	@Autowired
 	DireccionService direccionService;
 
 	
 	@RequestMapping(value="/direccion", method=RequestMethod.POST)
+	@PreAuthorize("#oauth2.isUser() and hasRole('ROLE_PERSONA') and #oauth2.hasScope('write')")
 	public void setCorreo(@RequestBody DireccionDto direccionRequest) {	
 		log.info(direccionRequest);
 		DireccionDao direcionDto=mapper.map(direccionRequest, DireccionDao.class);
@@ -46,6 +45,7 @@ public class DireccionApi  extends BaseService{
 //	}
 	
 	@RequestMapping(value="/direccion/{idPersona}",method=RequestMethod.GET)
+	@PreAuthorize("#oauth2.isUser() and hasRole('ROLE_PERSONA') and #oauth2.hasScope('write')")
 	public List<DireccionDto> getDirecciones(@PathVariable Long idPersona) {
 		List<DireccionDao> listDireccion=direccionService.getAllDireccionPersona(idPersona);
 		List<DireccionDto> listDireccionRequest=new ArrayList<DireccionDto>();
@@ -56,6 +56,7 @@ public class DireccionApi  extends BaseService{
 		return listDireccionRequest;
 	}
 	@RequestMapping(value="/direccion/{idPersona}/{idDireccion}",method=RequestMethod.PUT)
+	@PreAuthorize("#oauth2.isUser() and hasRole('ROLE_PERSONA') and #oauth2.hasScope('write')")
 	public void updateTelefono(@PathVariable Long idPersona,@PathVariable Long idDireccion,@RequestBody DireccionDto direccionRequest ) {
 		log.info("PUT idPersona:"+idPersona+" idDireccion:"+idDireccion);
 		log.info(direccionRequest);
@@ -64,6 +65,7 @@ public class DireccionApi  extends BaseService{
 	}
 	
 	@RequestMapping(value="/direccion/{idPersona}/{idDireccion}",method = RequestMethod.DELETE)
+	@PreAuthorize("#oauth2.isUser() and hasRole('ROLE_PERSONA') and #oauth2.hasScope('write')")
 	@ResponseStatus(value=HttpStatus.OK)
 	public void deletePersonaMoral(@PathVariable Long idPersona,@PathVariable Long idDireccion) {
 		log.info("DELETE correo idPersona:"+idPersona+" idDireccion:"+idDireccion);

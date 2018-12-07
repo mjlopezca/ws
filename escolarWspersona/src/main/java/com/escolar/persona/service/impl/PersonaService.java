@@ -17,7 +17,7 @@ public class PersonaService extends BaseService{
 	public PersonaDao savePersona(PersonaDao persona) {		
 		return personaRepositorio.save(persona);
 	}
-	public PersonaDao getPersona(Long idPersona) {		
+	public PersonaDao getPersona(Long idPersona)  {		
 		return personaRepositorio.findById(idPersona).get();
 	}
 	public void updatePersona(PersonaDao personaUpdate, Long idPersona) {

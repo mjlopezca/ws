@@ -3,8 +3,8 @@ package com.escolar.persona.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.escolar.enums.Estado;
 import com.escolar.persona.repository.PersonaRepository;
+import com.escolar.enums.Estado;
 import com.escolar.persona.dao.PersonaDao;
 import com.escolar.persona.dao.PersonaMoralDao;
 import com.escolar.persona.repository.PersonaMoralRepository;

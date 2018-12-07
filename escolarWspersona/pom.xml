@@ -55,14 +55,31 @@
   			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.escolar.personaModel</groupId>
-  			<artifactId>escolar.personaModel</artifactId>
+			<groupId>com.escolar.exception</groupId>
+  			<artifactId>escolar.exception</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  			<exclusions>
+		        <exclusion>
+		          <groupId>org.springframework</groupId>
+   				  <artifactId>spring-web</artifactId>
+		        </exclusion>
+		      </exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.escolar.modelPersona</groupId>
+  			<artifactId>escolar.modelPersona</artifactId>
   			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.escolar.seguridadWS</groupId>
   			<artifactId>escolarSeguridadWS</artifactId>
   			<version>0.0.1-SNAPSHOT</version>
+  			<exclusions>
+				<exclusion>  <!-- declare the exclusion here -->
+	    			<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-parent</artifactId>
+				</exclusion>
+		    </exclusions> 
 		</dependency>
 		<dependency>
   			<groupId>net.sf.dozer</groupId>
