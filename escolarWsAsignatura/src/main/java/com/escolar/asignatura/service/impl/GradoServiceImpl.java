@@ -45,7 +45,7 @@ public class GradoServiceImpl extends  AsignaturaBaseService implements GradoSer
 	}
 	public void deleteGrado(Long idGrado) {
 		boolean existeGrado=gradoRepository.existsById(idGrado);
-		assertTrue("No existe el grado en el catalogo", existeGrado);
+		//assertTrue("No existe el grado en el catalogo", existeGrado);
 		gradoRepository.deleteById(idGrado);
 		
 	}
