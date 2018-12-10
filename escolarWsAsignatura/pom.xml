@@ -69,17 +69,17 @@
   			<artifactId>escolar.modelAsignatura</artifactId>
   			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.escolar.seguridadWS</groupId>
   			<artifactId>escolarSeguridadWS</artifactId>
   			<version>0.0.1-SNAPSHOT</version>
   			<exclusions>
-				<exclusion>  <!-- declare the exclusion here -->
+				<exclusion>  declare the exclusion here
 	    			<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-parent</artifactId>
 				</exclusion>
 		    </exclusions> 
-		</dependency>
+		</dependency> -->
 		<dependency>
   			<groupId>net.sf.dozer</groupId>
   			<artifactId>dozer</artifactId>
