@@ -7,7 +7,7 @@ public class AsignaturaDto {
 	Long idAsignatura;
 	String nombre;
 	Estado idEstado;
-	Long idGrado;
+	GradoDto grado;
 	public Long getIdAsignatura() {
 		return idAsignatura;
 	}
@@ -26,16 +26,17 @@ public class AsignaturaDto {
 	public void setIdEstado(Estado idEstado) {
 		this.idEstado = idEstado;
 	}
-	public Long getIdGrado() {
-		return idGrado;
+	public GradoDto getGrado() {
+		return grado;
 	}
-	public void setIdGrado(Long idGrado) {
-		this.idGrado = idGrado;
+	public void setGrado(GradoDto grado) {
+		this.grado = grado;
 	}
 	@Override
 	public String toString() {
 		return "AsignaturaDto [idAsignatura=" + idAsignatura + ", nombre=" + nombre + ", idEstado=" + idEstado
-				+ ", idGrado=" + idGrado + "]";
+				+ ", grado=" + grado + "]";
 	}
+	
 	
 }

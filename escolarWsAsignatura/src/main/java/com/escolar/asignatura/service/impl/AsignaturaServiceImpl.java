@@ -43,7 +43,7 @@ public class AsignaturaServiceImpl extends  AsignaturaBaseService  implements As
 		log.info("actual: "+asignaturaActual);
 		if(asignaturaActual.getIdAsignatura()==asignaturaUpdate.getIdAsignatura()) {
 			asignaturaActual.setIdEstado(asignaturaUpdate.getIdEstado());
-			asignaturaActual.setIdGrado(asignaturaUpdate.getIdGrado());
+			asignaturaActual.setGrado(asignaturaUpdate.getGrado());
 			asignaturaActual.setNombre(asignaturaUpdate.getNombre());
 			log.info("update: "+asignaturaActual);
 			saveAsignatura(asignaturaActual);

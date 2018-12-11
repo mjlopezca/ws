@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.escolar.enums.Estado;
@@ -15,8 +17,11 @@ public class AsignaturaDao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long idAsignatura;
 	String nombre;
-	Estado idEstado;
-	Long idGrado;
+	Estado idEstado;	
+	@OneToOne   
+	@JoinColumn(name = "id_grado")
+	GradoDao grado;
+	
 	public Long getIdAsignatura() {
 		return idAsignatura;
 	}
@@ -35,15 +40,17 @@ public class AsignaturaDao {
 	public void setIdEstado(Estado idEstado) {
 		this.idEstado = idEstado;
 	}
-	public Long getIdGrado() {
-		return idGrado;
+	public GradoDao getGrado() {
+		return grado;
 	}
-	public void setIdGrado(Long idGrado) {
-		this.idGrado = idGrado;
+	public void setGrado(GradoDao grado) {
+		this.grado = grado;
 	}
 	@Override
 	public String toString() {
-		return "AsignaturaDto [idAsignatura=" + idAsignatura + ", nombre=" + nombre + ", idEstado=" + idEstado
-				+ ", idGrado=" + idGrado + "]";
+		return "AsignaturaDao [idAsignatura=" + idAsignatura + ", nombre=" + nombre + ", idEstado=" + idEstado
+				+ ", grado=" + grado + "]";
 	}
+	
+	
 }

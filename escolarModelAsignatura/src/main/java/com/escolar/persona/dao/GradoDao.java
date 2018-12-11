@@ -14,7 +14,7 @@ public class GradoDao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long idGrado;
-	byte gradoNumero;
+	short gradoNumero;
 	String gradoLetra;
 	Estado idEstado;
 	public Long getIdGrado() {
@@ -23,10 +23,10 @@ public class GradoDao {
 	public void setIdGrado(Long idGrado) {
 		this.idGrado = idGrado;
 	}
-	public byte getGradoNumero() {
+	public short getGradoNumero() {
 		return gradoNumero;
 	}
-	public void setGradoNumero(byte gradoNumero) {
+	public void setGradoNumero(short gradoNumero) {
 		this.gradoNumero = gradoNumero;
 	}
 	public String getGradoLetra() {
@@ -40,6 +40,11 @@ public class GradoDao {
 	}
 	public void setIdEstado(Estado idEstado) {
 		this.idEstado = idEstado;
+	}
+	@Override
+	public String toString() {
+		return "GradoDao [idGrado=" + idGrado + ", gradoNumero=" + gradoNumero + ", gradoLetra=" + gradoLetra
+				+ ", idEstado=" + idEstado + "]";
 	}
 	
 	
