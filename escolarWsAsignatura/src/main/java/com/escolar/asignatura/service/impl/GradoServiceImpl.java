@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.escolar.asignatura.repository.GradoRepository;
 import com.escolar.asignatura.service.GradoService;
+import com.escolar.exception.EscolarException;
 import com.escolar.persona.dao.GradoDao;
 
 @Service
@@ -34,16 +35,23 @@ public class GradoServiceImpl extends  AsignaturaBaseService implements GradoSer
 	public void updateGrado(Long idGrado, GradoDao gradoUpdate) {
 		GradoDao gradoActual=getGrado(idGrado);
 		log.info("gradoActual:"+gradoActual);
-		log.info("update:"+gradoUpdate);
-		gradoActual.setGradoLetra(gradoUpdate.getGradoLetra());
-		gradoActual.setGradoNumero(gradoUpdate.getGradoNumero());
-		gradoActual.setIdEstado(gradoUpdate.getIdEstado());
-		saveGrado(gradoActual);
+		if(idGrado==gradoUpdate.getIdGrado()) {
+			log.info("update:"+gradoUpdate);
+			gradoActual.setGradoLetra(gradoUpdate.getGradoLetra());
+			gradoActual.setGradoNumero(gradoUpdate.getGradoNumero());
+			gradoActual.setIdEstado(gradoUpdate.getIdEstado());
+			saveGrado(gradoActual);	
+		}
+		else {
+			throw new EscolarException(idGrado,"el id recivido no corresponde al grado."+gradoUpdate);
+		}
+	
 		
 	}
 	public void deleteGrado(Long idGrado) {
 		//boolean existeGrado=gradoRepository.existsById(idGrado);
 		//assertTrue("No existe el grado en el catalogo", existeGrado);
+		log.info("delete idGrado:"+idGrado);
 		gradoRepository.deleteById(idGrado);
 		
 	}

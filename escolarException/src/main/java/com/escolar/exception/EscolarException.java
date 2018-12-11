@@ -18,6 +18,7 @@ public class EscolarException extends java.lang.RuntimeException {
 	public EscolarException(Long id,String exepcion){
 		this.id = id;
 		this.exepcion=exepcion;
+		mensajeUsuario=exepcion;
 	}
 	public EscolarException(Long id,String exepcion,String mensajeUsuario){
 		this.id = id;
